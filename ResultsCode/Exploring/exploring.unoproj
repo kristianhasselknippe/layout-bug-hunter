@@ -1,0 +1,20 @@
+{
+	"RootNamespace":"",
+	"Packages": [
+        "Fuse",
+		"FuseJS"
+	],
+    "Mobile": {
+  		"Orientations": "Portrait"
+	},
+	"Projects": [
+		"../../fuse-view-crawler/FuseViewCrawler.unoproj"
+	],
+	"Includes": [
+  		"Assets/*.png:Bundle",
+		"MainView.js:Bundle",
+		"places.js:Bundle",
+		"*",
+
+	]
+}

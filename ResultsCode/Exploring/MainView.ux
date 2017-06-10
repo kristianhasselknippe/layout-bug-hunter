@@ -1,0 +1,54 @@
+<App>
+	<JavaScript File="MainView.js" />
+
+	<GUITestOracle ux:Name="testOracle"/>
+
+	<Grid Rows="auto,1*">
+		<iOS.StatusBarConfig Style="Light" />
+
+		<Panel ux:Class="ExploreItem" Margin="20" CardAlignment="Left" BoxSizing="FillAspect" Aspect="1.85" >
+			<string ux:Property="ImageName" />
+			<string ux:Property="Country" />
+			<float4 ux:Property="ForegroundColor" />
+			<Alignment ux:Property="CardAlignment" />
+
+			<Panel ux:Name="placeContainer" Width="55%" Alignment="{ReadProperty CardAlignment}">
+				<Panel>
+					<StackPanel Width="80%" Alignment="CenterLeft" Margin="32,0,0,0">
+						<Text Value="{ReadProperty ImageName}" TextColor="#fff" FontSize="26 * (width(placeContainer) / 230)" TextWrapping="Wrap" />
+						<Text Value="{ReadProperty Country}" TextColor="#fff" FontSize="12 * (width(placeContainer) / 230)" Margin="0,20,0,0"/>
+					</StackPanel>
+
+					<Rectangle Color="{ReadProperty ForegroundColor}" Opacity="0.9" Layer="Background"/>
+				</Panel>
+			</Panel>
+
+			<Panel Height="85%">
+				<Image StretchMode="UniformToFill" File="{image}"/>
+			</Panel>
+		</Panel>
+
+
+
+		<StackPanel ux:Name="topBar" Row="0" Color="#5D6373">
+			<Panel Color="#5D6373">
+				<StatusBarBackground/>
+			</Panel>
+			<Panel Height="50">
+				<Text Value="Places" TextColor="#fff" Alignment="VerticalCenter" Margin="25,0" FontSize="20"/>
+			</Panel>
+		</StackPanel>
+
+			<Grid RowCount="3">
+				<Each Items="{places}">
+					<ExploreItem ux:Name="topItem" ImageName="{name}" Country="{country}"
+								 ForegroundColor="{color}" Height="200" CardAlignment="{alignment}" />
+				</Each>
+			</Grid>
+
+		<LinearGradient StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Offset="0" Color="#9DA2B0" />
+			<GradientStop Offset="1" Color="#252A37" />
+		</LinearGradient>
+	</Grid>
+</App>

@@ -1,0 +1,41 @@
+<App>
+	<TextInput ux:Class="Text" TextColor="{Property Color}" Color="Black" >
+		<float4 ux:Property="Color" />
+	</TextInput>
+
+	<Rectangle ux:Class="Wrapper" Color="#FFDEDE" CornerRadius="5" Width="55%" Height="50%"/>
+
+	<GUITestOracle ux:Name="testOracle"/>
+
+	<PageControl>
+		<Page>
+			<Grid RowCount="3">
+				<Panel>
+					<Wrapper Color="#FFDEDE">
+						<Text Alignment="Left" Value="This text is too long for its container." Width="300" Height="30"/>
+					</Wrapper>
+				</Panel>
+				<Panel>
+					<Wrapper Color="#F7F3CE">
+						<Text Value="This text is not too long" />
+					</Wrapper>
+				</Panel>
+				<Panel>
+					<Wrapper Color="#C5ECBE" Height="35%" Width="55%">
+						<Text Alignment="Top" Value="This text is too long for its container in the vertical direction." TextWrapping="Wrap"
+							  Height="60" Width="165"/>
+					</Wrapper>
+				</Panel>
+				<Panel>
+					<Wrapper Color="#4797B1" Height="50%" Width="55%">
+						<Text Value="This text is not long for its container in the vertical direction."
+							  TextWrapping="Wrap"
+							  Width="160" Height="65"/>
+					</Wrapper>
+				</Panel>
+			</Grid>
+		</Page>
+
+
+	</PageControl>
+</App>

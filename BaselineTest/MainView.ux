@@ -1,0 +1,20 @@
+<App>
+	<GUITestOracle ux:Name="testOracle"/>
+
+	<Grid ux:Name="foo" Rows="1*,1*">
+		<Grid Rows="1*,1*" ColumnCount="3" Margin="29.5">
+			<Rectangle ux:Name="r" Row="0" Column="1" Width="100" Color="#f00"/>
+			<Rectangle ux:Name="r2" Row="1" Column="0" Color="#0f0" />
+			<Rectangle ux:Name="r3" Row="1" Column="2" Color="#00f" >
+				<Clicked>
+					<DebugAction Message="{= width(r)}, {= width(r2)}, {= width(r3)}, {= width(foo)}" />
+				</Clicked>
+			</Rectangle>
+		</Grid>
+		<Grid Rows="1*,1*" ColumnCount="3" Margin="25">
+			<Rectangle Row="0" Column="1" MaxWidth="100" Color="#f0f" CornerRadius="5"/>
+			<Rectangle Row="1" Column="0" Color="#ff0" CornerRadius="5"/>
+			<Rectangle Row="1" Column="2" Color="#0ff" CornerRadius="5"/>
+		</Grid>
+	</Grid>
+</App>

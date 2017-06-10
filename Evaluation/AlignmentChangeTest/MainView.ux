@@ -1,0 +1,36 @@
+<App>
+	<float4 ux:Global="C1" ux:Value="#11aBa7" />
+	<float4 ux:Global="C2" ux:Value="#456EED" />
+	<float4 ux:Global="C3" ux:Value="#555952" />
+	<float4 ux:Global="C4" ux:Value="#F60C86" />
+
+	<GUITestOracle ux:Name="testOracle"/>
+
+	<Grid RowCount="3">
+		<Panel Color="#ddd">
+			<Grid RowCount="2" ColumnCount="3" Margin="10" Height="150">
+				<Rectangle Color="C1" CornerRadius="5" Row="0" Column="1"
+						   MaxWidth="100"/>
+				<Rectangle Color="C2" CornerRadius="5" Row="1" Column="0"/>
+				<Rectangle Color="C2" CornerRadius="5" Row="1" Column="2"/>
+			</Grid>
+		</Panel>
+
+		<Panel Color="#eee">
+			<WrapPanel>
+				<Rectangle Color="C1" CornerRadius="5" Margin="5" Width="100" Height="60"/>
+				<Rectangle Color="C2" CornerRadius="5" Margin="5" Width="100" Height="60"/>
+				<Rectangle Color="C3" CornerRadius="5" Margin="5" Width="100" Height="60"/>
+				<Rectangle Color="C4" CornerRadius="5" Margin="5" Width="100" Height="60"/>
+			</WrapPanel>
+		</Panel>
+		<Panel>
+			<StackPanel Margin="10" ItemSpacing="4" Width="40%">
+				<Rectangle Color="C1" CornerRadius="5" MaxWidth="130" Height="30"/>
+				<Rectangle Color="C2" CornerRadius="5" MaxWidth="128" Height="30"/>
+				<Rectangle Color="C3" CornerRadius="5" MaxWidth="126" Height="30"/>
+				<Rectangle Color="C4" CornerRadius="5" MaxWidth="124" Height="30"/>
+			</StackPanel>
+		</Panel>
+	</Grid>
+</App>
